@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bmsprints — Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.png" alt="Bmsprints logo" class="logo" onerror="this.style.display='none'">
+      <h1>Bmsprints</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>For inquiries & orders:</p>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h4>Phone</h4>
+          <p><a href="tel:+2348140009776">+234-814-000-9776</a></p>
+        </div>
+        <div class="card">
+          <h4>Email</h4>
+          <p><a href="mailto:bmsprintersandpublishers@gmaill.com">bmsprintersandpublishers@gmaill.com</a></p>
+        </div>
+        <div class="card">
+          <h4>Address</h4>
+          <p>Katsina, Batagarawa</p>
+        </div>
+      </div>
+
+      <h3>Send us a message</h3>
+      <form id="contact-form" class="contact-form">
+        <label>Name</label>
+        <input id="c-name" required>
+        <label>Email</label>
+        <input id="c-email" type="email" required>
+        <label>Message</label>
+        <textarea id="c-message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+        <div id="contact-result" class="small muted"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© <span id="year3"></span> Bmsprints</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+
+    // contact form behaviour (client-only - shows a friendly note)
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('contact-result').textContent = 'Message received — we will contact you soon. (This demo stores no server messages.)';
+      this.reset();
+    });
+  </script>
+</body>
+</html>

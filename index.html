@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bmsprints — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.png" alt="Bmsprints logo" class="logo" onerror="this.style.display='none'">
+      <h1>Bmsprints</h1>
+      <p class="tagline">Printers & Publishers — Katsina, Batagarawa</p>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Your one-stop printing & business services</h2>
+      <p>Printing, photocopy, lamination, binding, book shop, POS, passport photos, customization, internet cafe and more.</p>
+      <a class="btn" href="services.html">See Services</a>
+    </section>
+
+    <section class="about">
+      <h3>About Bmsprints</h3>
+      <p>Bmsprints is a trusted business services center offering printing, publishing and support services for students, businesses and events. Visit our Services page to see available items and prices.</p>
+    </section>
+
+    <section class="quick-services">
+      <h3>Popular services</h3>
+      <div id="home-services-grid" class="services-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> Bmsprints — <span class="small">Katsina, Batagarawa</span></div>
+    <div class="small">Phone: +234-814-000-9776 • Email: bmsprintersandpublishers@gmaill.com</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // show a few services on the home page after script loads
+    document.getElementById('year').textContent = new Date().getFullYear();
+    window.addEventListener('load', function(){
+      renderHomeServices();
+    });
+  </script>
+</body>
+</html>
